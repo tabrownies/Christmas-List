@@ -22,8 +22,8 @@
         },
         methods:{
             resetRanks: function(){
-                for(let i = 0; i < this.$root.$data.list.length; ++i){
-                    this.list.rank = i+1;
+                for(let i = 0; i < this.list.length; ++i){
+                    this.list[i].rank = i+1;
                 }
             },
             dragItem: function(item){
@@ -32,9 +32,9 @@
             dropItem(item){
                 const indexItem=this.list.indexOf(this.drag);
                 const indexTarget = this.list.indexOf(item);
+                console.log(indexItem,indexTarget)
                 this.list.splice(indexItem,1);
-                this.list.splice(indexTarget,0,this.list[indexItem]);
-                
+                this.list.splice(indexTarget,0,this.drag);
                 this.resetRanks();
             }
         }
