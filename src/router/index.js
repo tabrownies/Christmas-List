@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import MyList from '../views/MyList.vue'
 import Sort from '../views/Sort.vue'
 import ParentView from '../views/ParentView'
@@ -10,11 +9,6 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/my-list',
     name: 'MyList',
     component: MyList
   },
