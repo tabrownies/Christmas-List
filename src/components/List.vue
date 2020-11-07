@@ -5,7 +5,7 @@
                 <h3>{{item.rank}}</h3>
                 <img :src="item.image">
                 <p>{{item.name}}</p>
-                <p>{{item.cost}}</p>
+                <p>${{item.cost}}</p>
                 <button v-if="remove" @click.prevent="removeMethod(item)">X</button>
             </li>
         </ul>
@@ -14,23 +14,91 @@
 <script>
     export default {
         name: 'List',
-        props:{
+        props: {
             list: Array,
-            remove:Boolean,
+            remove: Boolean,
             removeMethod: Function
         }
     }
 </script>
 <style scoped>
-    li{
-        display:flex;
-        align-items:center;
-        padding:10px;
-        list-style: none;   
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        width: 100%;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        width: 100%;
+        list-style: none;
+        background-color: whitesmoke;
+        border-bottom:3px solid #aaa;
+    }
+    li:first-of-type{
+        border-top:3px solid #aaa;
     }
     li h3,
     li img,
-    li p{
-        padding:5px;
+    li p {
+        padding: 5px;
+    }
+
+    li h3 {
+        font-size: 80px;
+        padding: 10px 50px;
+    }
+
+    li img {
+        height: 150px;
+        padding: 10px 50px;
+    }
+
+    li p {
+        font-size: 65px;
+        padding: 10px 45px;
+    }
+
+    li button {
+        height: 40px;
+        width: 50px;
+        font-size: 25px;
+    }
+
+    @media only screen and (max-width:1000px) {
+
+        li h3,
+        li img,
+        li p {
+            padding: 5px;
+        }
+
+        li h3 {
+            font-size: 35px;
+            padding: 10px 50px;
+        }
+
+        li img {
+            height: 100px;
+            padding: 10px 50px;
+        }
+
+        li p {
+            font-size: 30px;
+            padding: 10px 45px;
+        }
+
+        li button {
+            height: 20px;
+            width: 25px;
+            font-size: 15px;
+        }
     }
 </style>

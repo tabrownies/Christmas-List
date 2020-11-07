@@ -6,7 +6,7 @@
             <input type="text" placeholder="Image URL (optional)" v-model="tempImage">
             <button @click.prevent="addItem">ADD</button>
         </form>
-        <List :list="this.list" :remove="true" :removeMethod="removeItem"></List>
+        <List class="list" :list="this.list" :remove="true" :removeMethod="removeItem"></List>
     </div>
 </template>
 <script>
@@ -46,3 +46,31 @@
         }
     }
 </script>
+<style scoped>
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    form{
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: rgb(214, 214, 214);
+        
+    }
+    .list,
+    form{
+        width:60%;
+    }
+    form input,
+    form button{
+        margin:10px 15px;
+    }
+    @media only screen and (max-width:1000px){
+        .list,
+        form{
+            width:100%;
+        }
+    }
+</style>

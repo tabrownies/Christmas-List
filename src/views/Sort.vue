@@ -1,8 +1,14 @@
 <template>
     <div class="wrapper">
         <ul>
+            <div class="explaination">
+                DRAG TO RE-SORT
+            </div>
+            <li>
+                <h3>Rank</h3><h3>Name</h3>
+            </li>
             <li v-for="item in list" draggable="true" @dragstart="dragItem(item)" @dragover.prevent @drop="dropItem(item)">
-                <h3>{{item.rank}}</h3><p>{{item.name}}</p>
+                <p>#{{item.rank}}</p><p>{{item.name}}</p>
             </li>
         </ul>
     </div>
@@ -41,12 +47,51 @@
     }
 </script>
 <style scoped>
+    *{
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+    }
+    div{
+        
+    }
+    .explaination{
+        font-size:30px;
+        padding:10px;
+        background-color: #ddd;
+        width:100%;
+        text-align: center;
+    }
+    ul{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
     ul li{
         display: flex;
         align-items: center;
+        justify-content: center;
+        width:50%;
+        padding: 10px;
+        border:2px solid #991f00;
+        background-color: #39ac39;
+        border-radius: 4px;
+        margin:5px;
     }
-    ul li h3,
+    ul li:first-of-type{
+        border:none;
+        background-color: initial;
+    }
+    ul li h3{
+        font-size:45px;
+        padding:5px 50px;
+        width:50%;
+        text-align:center;
+    }
     ul li p{
-        padding:10px 5px;
+        font-size:35px;
+        padding:5px 50px;
+        width:50%;
+        text-align:center;
     }
 </style>
