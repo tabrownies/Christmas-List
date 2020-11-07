@@ -43,9 +43,8 @@
 
     form {
         display: flex;
-        width: 100%;
         justify-content: center;
-        font-size:30px;
+        flex-wrap: wrap;
         
         background-color: #ddd;
     }
@@ -54,14 +53,17 @@
         width:60%;
     }
     form input{
-        margin: 10px 15px;
-        font-size:30px;
-        padding-left:20px;
-        padding-top:0;
-        padding-bottom:0;
+        box-sizing: border-box;
+        margin:5px;
     }
 
     .radio{
-        margin-top:44px;
+        margin-top:18px;
+    }
+    @media only screen and (max-width:1000px){
+        .list,
+        form{
+            width:100%;
+        }
     }
 </style>

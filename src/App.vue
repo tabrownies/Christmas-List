@@ -19,6 +19,11 @@
       </nav>
     </header>
     <router-view />
+    <footer>
+      <a href="https://github.com/tabrownies/Christmas-List">
+        Github Repository
+      </a>
+    </footer>
   </div>
 </template>
 <style>
@@ -64,7 +69,24 @@
     color: white;
     text-decoration: underline;
   }
+  footer{
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-color: maroon;
+    margin-top:15px;
+  }
+  footer a{
+    font-size:25px;
+    color:whitesmoke;
 
+  }
+  footer a:hover{
+    text-decoration: none;
+    color:rgb(200,200,200,.4);
+  }
   @media only screen and (max-width:1000px) {
     header {
       display: flex;
@@ -82,15 +104,16 @@
       list-style: none;
     }
   }
-  @media only screen and (max-width:350px){
+  @media only screen and (max-width:400px){
     h1{
       font-size:24px;
     }
     ul{
-      flex-direction: column;
+      
+      flex-wrap: wrap;
     }
     ul li{
-      padding:5px 0px;
+      padding:5px;
     }
   }
   @media only screen and (min-width:1001px){

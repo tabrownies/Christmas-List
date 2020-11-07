@@ -52,17 +52,17 @@
     }
 
     li h3 {
-        font-size: 80px;
+        font-size: 60px;
         padding: 10px 50px;
     }
 
     li img {
-        height: 150px;
+        height: 120px;
         padding: 10px 50px;
     }
 
     li p {
-        font-size: 65px;
+        font-size: 40px;
         padding: 10px 45px;
     }
 

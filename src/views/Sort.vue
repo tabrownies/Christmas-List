@@ -74,13 +74,13 @@
         width:50%;
         padding: 10px;
         border:2px solid #991f00;
-        background-color: #39ac39;
+        background-color: whitesmoke;
         border-radius: 4px;
         margin:5px;
     }
     ul li:first-of-type{
         border:none;
-        background-color: initial;
+        background-color: white;
     }
     ul li h3{
         font-size:45px;
@@ -93,5 +93,11 @@
         padding:5px 50px;
         width:50%;
         text-align:center;
+    }
+    @media only screen and (max-width:800px){
+        ul li{
+            width:100%;
+            margin:2px 1px;
+        }
     }
 </style>
