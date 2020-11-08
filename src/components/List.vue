@@ -53,23 +53,24 @@
 
     li h3 {
         font-size: 60px;
-        padding: 10px 50px;
+        padding: 10px 30px;
     }
 
     li img {
         height: 120px;
-        padding: 10px 50px;
+        padding: 10px 30px;
     }
 
     li p {
         font-size: 40px;
-        padding: 10px 45px;
+        padding: 10px 30px;
     }
 
     li button {
         height: 40px;
         width: 50px;
         font-size: 25px;
+        margin-left:auto;
     }
 
     @media only screen and (max-width:1000px) {

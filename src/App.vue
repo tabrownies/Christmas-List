@@ -31,7 +31,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #172e01;
+    background-color: #e1e1e1;
   }
 </style>
 <style scoped>
@@ -59,7 +59,7 @@
   }
 
   .link {
-    color: #cc2900;
+    color: #b42501;
     text-decoration: none;
     text-shadow: 1px 1px #cccccc;
     text-align: center;
@@ -75,7 +75,7 @@
     display:flex;
     justify-content: center;
     align-items:center;
-    background-color: maroon;
+    background-color:#b42501;
     margin-top:15px;
   }
   footer a{

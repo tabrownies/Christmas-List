@@ -73,7 +73,7 @@
         justify-content: center;
         width:50%;
         padding: 10px;
-        border:2px solid #991f00;
+        border:2px solid #b42501;
         background-color: whitesmoke;
         border-radius: 4px;
         margin:5px;
